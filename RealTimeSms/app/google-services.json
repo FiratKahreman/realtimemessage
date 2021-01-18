@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "465294296473",
+    "firebase_url": "https://realtimesms-f9fb1-default-rtdb.firebaseio.com",
+    "project_id": "realtimesms-f9fb1",
+    "storage_bucket": "realtimesms-f9fb1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465294296473:android:2a7c385b17eee045353f08",
+        "android_client_info": {
+          "package_name": "com.example.realtimesms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465294296473-ccaqup2fmo1lke347tfninl2n72nvcg5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHDqDqKCED_GsatMAlzj9qWyf67mdSFK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "465294296473-ccaqup2fmo1lke347tfninl2n72nvcg5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
