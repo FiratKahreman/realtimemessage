@@ -8,17 +8,17 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="55dp"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="#f3c623"
+        android:background="#4b4b4b"
         android:id="@+id/ust"
         android:layout_alignParentTop="true"
         >
 
     <ImageView
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:background="@drawable/back"
         app:layout_constraintHorizontal_weight="1"
         android:id="@+id/backImage"
@@ -30,7 +30,7 @@
             android:layout_weight="6"
             android:layout_marginLeft="20dp"
             android:text="asdadas"
-            android:textColor="@color/black"
+            android:textColor="#e4e5f0"
             android:id="@+id/chatUserName"
             android:textSize="25dp"
 
@@ -42,16 +42,16 @@
         android:layout_width="match_parent"
         android:layout_above="@+id/alt"
         android:id="@+id/chatRecyView"
-        android:background="@drawable/chat_back"
+        android:background="@drawable/backgorund_chat"
         android:layout_below="@+id/ust"
         android:layout_height="match_parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="#f3c623"
+        android:background="#4b4b4b"
         android:id="@+id/alt"
         android:layout_alignParentBottom="true"
         >
@@ -62,8 +62,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="6"
             android:layout_marginRight="20dp"
-            android:textColor="@color/black"
-            android:textColorHint="#555"
+            android:textColor="@color/white"
+            android:textColorHint="#e4e5f0"
             android:id="@+id/chatEditText"
             android:textSize="25dp"
             android:hint="Mesaj Yazın"

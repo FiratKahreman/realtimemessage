@@ -36,11 +36,11 @@
 
     <Button
         android:id="@+id/girisYapButton"
-        android:layout_width="145dp"
-        android:layout_height="53dp"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
         android:layout_marginStart="31dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="65dp"
+        android:layout_marginBottom="70dp"
         android:background="#FFFAFA"
         android:backgroundTint="#EDEDEE"
         android:backgroundTintMode="screen"
@@ -55,9 +55,9 @@
     <Button
         android:id="@+id/kayitOlButton"
         android:layout_width="0dp"
-        android:layout_height="58dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginBottom="44dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="76dp"
         android:background="#FFFAFA"
         android:backgroundTint="#EDEDEE"
         android:backgroundTintMode="screen"
@@ -67,6 +67,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/girisYapButton" />
 
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -75,14 +76,14 @@
         android:layout_marginBottom="12dp"
         android:elegantTextHeight="false"
         android:text="NABAYSIN"
-        android:textColor="#4CAF50"
+        android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <TextView
         android:id="@+id/textView2"
