@@ -94,11 +94,6 @@ public class MainActivity extends AppCompatActivity {
                 emailText.setText("");
                 passwordText.setText("");
                 ekle(userName);
-/*
-                Intent intent = new Intent(MainActivity.this, ListActivity.class);
-                startActivity(intent);
-                finish();
-*/
 
             }
         }).addOnFailureListener(new OnFailureListener() {
@@ -114,16 +109,15 @@ public class MainActivity extends AppCompatActivity {
         String email = emailText.getText().toString();
         String password = passwordText.getText().toString();
         if(email.contains("@") ){
-        userName = email.substring(0,email.lastIndexOf("@"));}
-        else{firebaseAuth.createUserWithEmailAndPassword(email,password).addOnFailureListener(new OnFailureListener() {
+            userName = email.substring(0,email.lastIndexOf("@"));}
+        else
+            {
+            firebaseAuth.createUserWithEmailAndPassword(email,password).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(MainActivity.this, e.getLocalizedMessage().toString(), Toast.LENGTH_LONG).show();
             }
         });
-
-
-
 
         }
         if (userName.contains(".") || userName.contains("#") || userName.contains("$") || userName.contains("[") || userName.contains("]")){
@@ -141,16 +135,6 @@ public class MainActivity extends AppCompatActivity {
                     emailText.setText("");
                     passwordText.setText("");
                     ekle(userName);
-/*
-                Intent intent= new Intent(MainActivity.this,ListActivity.class);
-                reference.child("Kullanicilar").child(username).child("kullaniciadi").setValue(username);
-                intent.putExtra("kadi",username);
-                startActivity(intent);
-
-                Intent intent = new Intent(MainActivity.this,ListActivity.class);
-                startActivity(intent);
-                finish();
-*/
 
                 }
             }).addOnFailureListener(new OnFailureListener() {
@@ -163,9 +147,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-    public boolean isEmpty(String etText) {
-        return etText.trim().length() == 0;
-    }
 
     public void tanimla(){
 
@@ -176,16 +157,6 @@ public class MainActivity extends AppCompatActivity {
         firebaseDatabase=FirebaseDatabase.getInstance();
         reference=firebaseDatabase.getReference();
 
-/*
-       kayitOlButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String username=kullaniciAdiEditText.getText().toString();
-                kullaniciAdiEditText.setText("");
-                ekle(username);
-            }
-        });
-*/
     }
 
     public void ekle(String kadi){
@@ -194,9 +165,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()) {
-                    //System.out.println("Başarılı");
-                    //Toast.makeText(getApplicationContext(),"Başarıyla Kayıt Oldunuz.",Toast.LENGTH_LONG).show();
-                    //Toast.makeText(GirisActivity.this, "Basariyla kayit oldunuz.", Toast.LENGTH_LONG).show();
+
                     Intent intent= new Intent(MainActivity.this,ListActivity.class);
                     intent.putExtra("kadi",kadi);
                     startActivity(intent);

@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="6"
             android:layout_marginLeft="20dp"
-            android:text="asdadas"
+            android:text="gönderilen kullanıcı"
             android:textColor="#e4e5f0"
             android:id="@+id/chatUserName"
             android:textSize="25dp"

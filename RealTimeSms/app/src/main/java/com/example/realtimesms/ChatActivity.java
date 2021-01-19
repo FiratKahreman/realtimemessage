@@ -48,10 +48,10 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     public void tanimla(){
+
         list= new ArrayList<>();
         userName=getIntent().getExtras().getString("username");
         otherName=getIntent().getExtras().getString("othername");
-        Log.i("alınandegerler: ",userName+"--"+otherName);
         chatUserName=(TextView)findViewById(R.id.chatUserName);
         backImage=(ImageView)findViewById(R.id.backImage);
         sendImage=(ImageView)findViewById(R.id.sendImage);

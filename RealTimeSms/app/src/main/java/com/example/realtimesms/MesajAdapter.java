@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class MesajAdapter extends RecyclerView.Adapter<MesajAdapter.ViewHolder> {
+
     Context context;
     List<MesajModel> list;
     Activity activity;
@@ -23,6 +24,7 @@ public class MesajAdapter extends RecyclerView.Adapter<MesajAdapter.ViewHolder> 
     int view_send=1, view_received=2;
 
     public MesajAdapter(Context context, List<MesajModel> list, Activity activity, String userName) {
+
         this.context = context;
         this.list = list;
         this.activity = activity;
@@ -36,7 +38,7 @@ public class MesajAdapter extends RecyclerView.Adapter<MesajAdapter.ViewHolder> 
        View view;
        if(viewType == view_send){
            view=LayoutInflater.from(context).inflate(R.layout.send_layout,parent,false);
-        return new ViewHolder(view);
+           return new ViewHolder(view);
     }else{
            view=LayoutInflater.from(context).inflate(R.layout.received_layout,parent,false);
                return new ViewHolder(view);
@@ -45,7 +47,7 @@ public class MesajAdapter extends RecyclerView.Adapter<MesajAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-    holder.textView.setText(list.get(position).getText().toString());
+        holder.textView.setText(list.get(position).getText().toString());
 
     }
 
@@ -64,9 +66,7 @@ public class MesajAdapter extends RecyclerView.Adapter<MesajAdapter.ViewHolder> 
            }else{
                textView = itemView.findViewById(R.id.received_text);
            }
-
        }
-
     }
 
     @Override
@@ -74,7 +74,7 @@ public class MesajAdapter extends RecyclerView.Adapter<MesajAdapter.ViewHolder> 
         if(list.get(position).getFrom().equals(userName)){
         state=true;
         return view_send;
-        }else{
+        }else {
             state=false;
             return view_received;
         }

@@ -31,6 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListActivity extends AppCompatActivity {
+
     private FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference reference;
@@ -80,8 +81,7 @@ public class ListActivity extends AppCompatActivity {
         firebaseDatabase=FirebaseDatabase.getInstance();
         reference=firebaseDatabase.getReference();
 
-
-        list= new ArrayList<>();
+        list = new ArrayList<>();
         userRecyView =(RecyclerView)findViewById(R.id.userRecyView);
         RecyclerView.LayoutManager layoutManager= new GridLayoutManager(ListActivity.this,3);
         userRecyView.setLayoutManager(layoutManager);
@@ -96,7 +96,6 @@ public class ListActivity extends AppCompatActivity {
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 if(!dataSnapshot.getKey().equals(userName)) {
                     list.add(dataSnapshot.getKey());
-                    Log.i("Kullanicilar",dataSnapshot.getKey());
                     userAdapter.notifyDataSetChanged();
                 }
             }
