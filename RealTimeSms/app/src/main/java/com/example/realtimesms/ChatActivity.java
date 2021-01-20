@@ -83,6 +83,7 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     public void mesajGonder(String text){
+
         final String key=reference.child("Mesajlar").child(userName).child(otherName).push().getKey();
         final Map messageMap=new HashMap();
         messageMap.put("text",text);
